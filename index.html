@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js" type="module"></script>
+</head>
+<body>
+    
+<div id="app">
+
+    <h1>¿Cuál es tu serie favorita?</h1>
+
+    <form>
+        <!-- AGREGAR ELEMENTOS -->
+        <label>Nombre</label>
+        <input type="text" v-model="nombre">
+        <label>Serie</label>
+        <input type="text" v-model="serie">
+        <label> Plataforma</label>
+        <input type="text" v-model="plataforma">
+        <button @click.prevent="Send"> enviar</button> <br> <br>
+        
+        <!-- ELIMINAR PRIMER ELEMENTO -->
+        
+        <button @click.prevent="DeleteFirst()">Eliminar primer elemento</button> <br><br>
+        
+        <!-- ELIMINAR ULTIMO ELEMENTO -->
+        
+        <button @click.prevent="DeleteLast()">Eliminar ultimo elemento</button> <br><br>
+        
+        <!-- AGREGAR AL COMIENZO UN ELEMENTO -->
+        
+        <input type="text" v-model="nombre">
+        <input type="text" v-model="serie">
+        <input type="text" v-model="plataforma">
+        <!-- <input type="text" v-model="Agregar"> -->
+        <button @click.prevent="AddItem()">Agregar elemento al comienzo</button> <br><br>
+        
+        <!-- AGREGAR AL FINAL UN ELEMENTO -->
+        
+        <!-- <input type="text" v-model="AgregarFin">
+        <button @click.prevent="AddItemFin()">Agregar elemento al Final</button> -->
+    
+        <!--  -->
+    
+    </form> 
+    
+
+    <div v-for="e in lista">
+        {{e.nombre}}
+        {{e.serie}}
+        {{e.plataforma}}
+    </div>
+
+        <!-- ITERAR ARRAY CON OBJETOS CON FOREACH -->
+
+    <div v-model="lista">
+        {{nombre}} {{serie}} {{plataforma}}
+    </div>
+
+
+        <!-- ITERAR ARRAY CON OBJETOS CON FOREACH -->
+
+        <!-- ITERAR ARRAY CON OBJETOS CON FOREACH -->
+        <div v-for="Copia in Copialist"></div>
+        {{nombre}} {{serie}} {{plataforma}}
+
+</div>
+
+</body>
+</html>
